@@ -3,7 +3,7 @@ const {
   getAllTodos, addNewTodo, updateTodo, deleteTodo,
 } = require('../controllers/todoscontroller');
 
-const { confirmbody, confirmbodyinupdate, confirmuserlogged } = require('../middlewares/tourmiddlewares');
+const { confirmbody, confirmbodyinupdate, confirmuserlogged } = require('../middlewares/todomiddlewares');
 
 todosrouter.get('/', confirmuserlogged, getAllTodos);
 todosrouter.post('/', confirmuserlogged, confirmbody, addNewTodo);
